@@ -1,10 +1,6 @@
 const getPromise = (seconds) => new Promise((resolve,reject) => setTimeout(() => {resolve('에러')},seconds*1000));
 
-
-
-
 // getPromise(3).then((res) => {console.log(res)});
-
 
 // async function runner(){
 //     try{

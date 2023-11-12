@@ -22,4 +22,8 @@ void main() {
 
   print(person['study']());
   person2.study();
+
+  Null isNull = null;
+
+  print(isNull.runtimeType);
 }
