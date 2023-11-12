@@ -3,7 +3,9 @@ let colors = ['red','blue','black','orange'];
 const str = 'Apple,Orange,Banana,Mango';
 
 
-console.log(numbers.join('-')); 
+console.log(numbers.join('-'));
+console.log(typeof(numbers.join('-')));
+
 console.log(str.split(','));
 console.log(colors.reverse());
 console.log(numbers.slice(0,2))

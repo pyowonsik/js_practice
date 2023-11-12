@@ -24,14 +24,19 @@ player.forEach((value,key) => {
 
 player.set('Wonsik',26);
 console.log(player.get('Wonsik'));
+console.log(player.has('Wonsik')); // true
+
 
 
 console.log(Array.from(player.keys()))
+console.log([...player.values()]);
 
 
 
 let mySet = new Set([1,2,3,2,1]);
 mySet.add(4)
+
+console.log(mySet)
 
 console.log(mySet.has(2)) // true
 
