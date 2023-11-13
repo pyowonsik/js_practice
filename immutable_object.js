@@ -2,13 +2,6 @@ const wonsik = {
     name  : '표원식',
     year : 1998,
 
-    get age(){
-        return new Date().getFullYear - this.year;
-    },
-
-    set age(age){
-        this.year = new Date().getFullYear - age;
-    }
 }
 
 
@@ -60,13 +53,7 @@ const seoyeon = {
     name  : '이서연',
     year : 2000,
 
-    get age(){
-        return new Date().getFullYear - this.year;
-    },
-
-    set age(age){
-        this.year = new Date().getFullYear - age;
-    }
+  
 }
 
 console.log(seoyeon);
@@ -106,13 +93,7 @@ const codefactory = {
     name  : '코드팩토리',
     year : 1992,
 
-    get age(){
-        return new Date().getFullYear - this.year;
-    },
-
-    set age(age){
-        this.year = new Date().getFullYear - age;
-    }
+   
 }
 
 

@@ -34,3 +34,16 @@ const Mina = new Map([
         this.year = new Date().getFullYear - age;
     }
 }
+
+
+let defaults = { color: 'blue', fontSize: '12px' };
+let customStyles = { fontSize: '16px', theme: 'light' };
+
+let mergedStyles = { ...defaults, ...customStyles };
+
+console.log(mergedStyles);
+
+console.log(typeof(wonsik));
+
+
+
