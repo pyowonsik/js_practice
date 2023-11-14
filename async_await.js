@@ -20,15 +20,16 @@ const getPromise = (seconds) => new Promise((resolve,reject) => setTimeout(() =>
 
 // runner();
 
-const fetchData = () => new Promise((resolve) => setTimeout(() => {
-    resolve({'code' : 1})
+const fetchData = () => new Promise((resolve,reject) => setTimeout(() => {
+    resolve('완료')
 },2000));
 
 async function getData() {
     const resp = await fetchData();
-    console.log(resp.code);
+    console.log(resp);
 }
 
+getData();
 getData();
 
 

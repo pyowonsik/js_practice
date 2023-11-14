@@ -17,6 +17,6 @@ function hello(){
 
 
 // let 및 const 변수 호이스팅 -> var 변수의 호이스팅이라면 에러가 발생하지 않지만 , 'let' 과 'const' 변수는 초기화 하기 전에 접근하게 되면 에러가 발생한다. 
-// console.log(y);
-// let y = 10;
-// console.log(y);
+console.log(y);
+let y = 10;
+console.log(y);

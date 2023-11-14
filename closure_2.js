@@ -39,14 +39,15 @@ function cacheFunction(newNumb) {
 }
 
 
-const runner2 = cacheFunction();    // cashFunction을 통해 number값을 계산을 해두고
-console.log(runner2(10));           // 값만 넣어주면 빠른 계산이 가능하다.
-console.log(runner2(20));
+const cacher = cacheFunction();    // cashFunction을 통해 number값을 계산을 해두고
+console.log(cacher);
+// console.log(runner2(10));           // 값만 넣어주면 빠른 계산이 가능하다.
+// console.log(runner2(20));
 
 
 
 // 데이터 캐싱 2 : 반복적으로 특정값을 변환해야 할때
-function cacheFunction2(){
+function counterFunction(){
     var number = 99;
 
     function increment(){
@@ -56,23 +57,27 @@ function cacheFunction2(){
 
     return increment;
 }
-const runner3 = cacheFunction2();
-console.log(runner3());
-console.log(runner3());
+const counter = counterFunction();
+console.log(counter());
+console.log(counter());
 
 
 // 정보 은닉
-function Idol(name,year){
+function Person(name,age){
     this.name = name;
-    var _year = year;
-    this.sayNameAndYear = function(){
-        return `안녕하세요 저는 ${this.name}입니다. ${_year}에 태어났습니다.`
+    var _age = age;
+    this.sayInfo = function(){
+        return `안녕하세요 저는 ${_age}살 ${this.name}입니다. `
     }
 }
 
+const tom = new Person('톰',25);
+console.log(tom.sayInfo());
+console.log(tom.name);
+console.log(tom.age);
+// const yuJin = new Idol('안유진',2003);
+// console.log(yuJin.sayNameAndYear());
 
-const yuJin = new Idol('안유진',2003);
-console.log(yuJin.sayNameAndYear());
-
-console.log(yuJin.name);
-console.log(yuJin._year); // 출력시 year는 저장을 해두고 있지 않기 때문에 내부 함수 호출을 통해서만 접근가능하다.
+// console.log(yuJin.name);
+// console.log(yuJin._year); 
+// 출력시 year는 저장을 해두고 있지 않기 때문에 내부 함수 호출을 통해서만 접근가능하다.

@@ -38,7 +38,6 @@ function Counter() {
     this.count = 0;
   
     setInterval(() => {
-      // Arrow 함수는 자신만의 this를 갖지 않음
       this.count++;
       console.log(this.count);
     }, 10);

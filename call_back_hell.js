@@ -41,39 +41,40 @@ function waitAndRun2 (){
 
 const getPromise = (seconds) => new Promise((resolve,reject) => {
     setTimeout(() => {
-        // resolve('완료'); 
-        reject('에러');
+        resolve('완료'); 
+        // reject('에러');
     },seconds * 1000);
 }); 
 
-getPromise(3).then((res) => {
+getPromise(2).then((res) => {
     console.log('--- first then ---')
     console.log(res)
-    // return getPromise(3);
-}).catch((res) => {
-    console.log('--- first catch ---')
-    console.log(res)}).finally(() => {
-        console.log('--- finally --- ');
-    });
-
-// .then((res) => { 
-//     console.log('--- seconds then ---')
-//     console.log(res);
-//     return getPromise(4);
-// }).then((res) => {
-//     console.log('--- third then ---')
-//     console.log(res);
-//     return getPromise(4);
-// }).then((res) => {
-//     console.log('--- last then ---')
-//     console.log(res);
-// });
-
-
-Promise.all([
-    getPromise(1),
-    getPromise(4),
-    getPromise(1),
-]).then((res) => {
+    return getPromise(2);
+}).then((res) => { 
+    console.log('--- seconds then ---')
+    console.log(res);
+    return getPromise(3);
+}).then((res) => {
+    console.log('--- third then ---')
+    console.log(res);
+    return getPromise(3);
+}).then((res) => {
+    console.log('--- last then ---')
     console.log(res);
 });
+
+// catch((res) => {
+//     console.log('--- first catch ---')
+//     console.log(res)}).finally(() => {
+//         console.log('--- finally --- ');
+//     });
+
+
+
+// Promise.all([
+//     getPromise(1),
+//     getPromise(4),
+//     getPromise(1),
+// ]).then((res) => {
+//     console.log(res);
+// });

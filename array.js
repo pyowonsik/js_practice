@@ -4,7 +4,6 @@ const str = 'Apple,Orange,Banana,Mango';
 
 
 console.log(numbers.join('-'));
-console.log(typeof(numbers.join('-')));
 
 console.log(str.split(','));
 console.log(colors.reverse());
